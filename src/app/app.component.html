@@ -1,27 +1,59 @@
 <h1>Password Generator</h1>
-<form class="password__form">
-   <div class="form_control">
-      <label for="length">Character Length <span>10</span></label>
+<br>
+<br>
+<h3><strong>{{ password }}</strong></h3>
+<form class="form" [formGroup]="passwordForm"
+   (ngSubmit)="onSubmit()"
+>
+   <div class="form__control_range">
+      <label for="length">Character Length <span>{{ length }}</span></label>
       <input 
         type="range"
         id="length" 
-        name="length" 
-        min="4"
-        max="20"
-        value="4"
-        [(ngModel)]="length"
+        name="length"
+        min="8"
+        max="20" 
+        formControlName="length"
       >
    </div>
-   <div class="">
+   <div class="form__control">
      <input 
         type="checkbox"
         id="length" 
-        name="length" 
-        min="4"
-        max="20"
-        value="4"
-        [(ngModel)]="length"
+        name="upper_case" 
+        formControlName="upper_case"
      >
-     <label for="length">Length</label>
- </div>
+     <label for="upper_case" class="form__label">include upper case letters</label>
+   </div>
+   <div class="form__control">
+      <input 
+         type="checkbox"
+         id="lower_case" 
+         name="lower_case" 
+         formControlName="lower_case"
+      >
+      <label for="lower_case" class="form__label">include lower case letters</label>
+    </div>
+    <div class="form__control">
+      <input 
+         type="checkbox"
+         id="numbers" 
+         name="numbers" 
+         formControlName="numbers"
+      >
+      <label for="numbers" class="form__label">include numbers</label>
+    </div>
+    <div class="form__control">
+      <input 
+         type="checkbox"
+         id="symbols" 
+         name="symbols" 
+         formControlName="symbols"
+      >
+      <label for="symbols" class="form__label">include symbols</label>
+   </div>
+   <div class="form_password_strenth">
+
+   </div>
+   <button class="form__btn">Generate</button>
 </form>

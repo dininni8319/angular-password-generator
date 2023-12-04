@@ -5,22 +5,28 @@ h1 {
   text-align: center;
 }
 
-.password__form {
+.form {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-top: 50px;
   background-color: $form-background;
-  width: 100%;
+  width: 40vw;
+  padding: 5px;
 }
 
-.form_control {
+.form__control_range {
   display: flex;
   flex-direction: column;
+  margin: 5px 0;
+}
+
+.form__control {
+  display: flex;
   align-items: center;
-  justify-content: center;
-  margin: 20px 0;
+  justify-content: space-between;
+  margin: 5px 0;
 }
 
 label {
@@ -28,4 +34,34 @@ label {
     color: $accent-color;
   }
   color: $text-color2;
+}
+
+.form__label {
+  margin: 20px 0;
+  text-transform: capitalize;
+  color: $text-color2;
+}
+
+.form_password_strenth {
+  width: 100%;
+  height: 30px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  background-color: $primary;
+  padding: 5px;
+}
+
+.form__btn {
+  margin: 20px 0;
+  width: 100%;
+  height: 40px;
+  background-color: $accent-color;
+  color: $text-color;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  &:hover {
+    background-color: $accent-color;
+  }
 }
