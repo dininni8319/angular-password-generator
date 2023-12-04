@@ -1,1 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
+$main-background: #111116;
+$form-background: #24232A;
+$primary: #18171F;
+$secondary: #EDCE74;
+$text-color: #52505D;
+$text-color2: rgba(255, 255, 255, 0.862);
+$accent-color:#A4FFAF;
+
+
+html,body {
+  background-color: $main-background;
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: var(--text);
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+}
+

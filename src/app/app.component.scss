@@ -1,0 +1,31 @@
+@import '../styles.scss';
+
+h1 {
+  color: $text-color;
+  text-align: center;
+}
+
+.password__form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  background-color: $form-background;
+  width: 100%;
+}
+
+.form_control {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+label {
+  span {
+    color: $accent-color;
+  }
+  color: $text-color2;
+}
