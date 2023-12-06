@@ -7,8 +7,13 @@ import {
   FormGroup, 
   Validators 
 } from '@angular/forms'
+import { ClipboardService } from 'ngx-clipboard';
 
-import { generatePassword } from 'src/functions';
+import { 
+  generatePassword,
+  checkStrength
+} from 'src/functions';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -16,17 +21,19 @@ import { generatePassword } from 'src/functions';
 })
 
 export class AppComponent implements OnInit {
-  title = 'Angular Material Starter';
   length = 6
-  upper_case = false
-  lower_case = false
-  numbers = false
-  symbols = false
+  upper_case = true
+  lower_case = true
+  numbers = true
+  symbols = true
   password = '';
   passwordForm!: FormGroup;
-  charset = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()-_+=<>?'
+  passwordStrenght!: string;
 
-  constructor(private fb: FormBuilder) {}
+  constructor(
+    private fb: FormBuilder,
+    private clipboardService: ClipboardService
+  ) {}
 
   ngOnInit() {
     this.passwordForm = this.fb.group({
@@ -44,9 +51,31 @@ export class AppComponent implements OnInit {
       this.numbers = this.passwordForm.value.numbers;
       this.symbols = this.passwordForm.value.symbols;
     });
+    this.checkStrength();
+
   }
 
   onSubmit() {
-   this.password = generatePassword(this.length) 
+   this.password = generatePassword(
+      this.length, 
+      this.upper_case,
+      this.lower_case,
+      this.numbers,
+      this.symbols
+    ) 
+  }
+
+  copyPassword() {
+    this.clipboardService.copyFromContent(this.password);
+  }
+
+  checkStrength() {
+    this.passwordStrenght = checkStrength(
+      this.upper_case,
+      this.lower_case,
+      this.numbers,
+      this.symbols
+    )
+    
   }
 }
