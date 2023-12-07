@@ -1,6 +1,14 @@
 
 <h1>Password Generator</h1>
 
+<section 
+  *ngIf="!passwordStrength">
+  <p
+  style="background-color: red; padding: 5px;"
+  > 
+   Please select at least one option!!!
+  </p>
+</section>
 <section>
    <div #container class="clipboard-container">
       <h3>
@@ -16,86 +24,8 @@
       </mat-icon>
    </div>
    <div class="divider"></div>
-   <form class="form" [formGroup]="passwordForm"
-      (ngSubmit)="onSubmit()"
-   >
-      <div class="form__control_range">
-         <label for="length">
-            Character Length 
-            <span>
-               {{ length }}
-            </span>
-         </label>
-         <input 
-           type="range"
-           id="length" 
-           name="length"
-           min="6"
-           max="20" 
-           formControlName="length"
-           (click)="checkStrength()"
-         >
-      </div>
-      <div class="form__control">
-        <input 
-           type="checkbox"
-           id="length" 
-           name="upper_case" 
-           formControlName="upper_case"
-           (click)="checkStrength()"
-        >
-        <label for="upper_case" class="form__label">
-         include uppercase letters
-        </label>
-      </div>
-      <div class="form__control">
-         <input 
-            type="checkbox"
-            id="lower_case" 
-            name="lower_case" 
-            formControlName="lower_case"
-         >
-         <label for="lower_case" class="form__label">
-            include lowercase letters
-         </label>
-       </div>
-       <div class="form__control">
-         <input 
-            type="checkbox"
-            id="numbers" 
-            name="numbers" 
-            class="form__control_checkbox"
-            formControlName="numbers"
-            (click)="checkStrength()"
-         >
-         <label for="numbers" class="form__label">
-            include numbers
-         </label>
-       </div>
-       <div class="form__control">
-         <input 
-            type="checkbox"
-            id="symbols" 
-            name="symbols" 
-            formControlName="symbols"
-            (click)="checkStrength()"
-         >
-         <label for="symbols" class="form__label">
-            include symbols
-         </label>
-      </div>
-      <div class="form_password_strenth">
-         <h3>STRENGTH</h3>
-         <div class="form_password_strenth__bar">
-            <h3>{{ passwordStrenght }}</h3>
-            <span [ngClass]="{'active': upper_case}"></span>
-            <span [ngClass]="{'active': lower_case}"></span>
-            <span [ngClass]="{'active': numbers}"></span>
-            <span [ngClass]="{'active': symbols}"></span>
-         </div>
-      </div>
-      <button class="form__btn">Generate
-         <mat-icon class="btn__icon_g">autorenew</mat-icon>
-      </button>
-   </form>
+   <app-form
+      (passwordStrengthEvent)="onPasswordStrength($event)"
+      (passwordEvent)="onChangePassword($event)"
+   ></app-form>
 </section>

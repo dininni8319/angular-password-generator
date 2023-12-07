@@ -1,0 +1,87 @@
+<form class="form" [formGroup]="passwordForm"
+  (ngSubmit)="onSubmit()"
+>
+  <div class="form__control_range">
+    <label for="length">
+        Character Length 
+        <span>
+          {{ length }}
+        </span>
+    </label>
+    <input 
+      type="range"
+      id="length" 
+      name="length"
+      min="6"
+      max="20" 
+      formControlName="length"
+      (click)="checkStrength()"
+    >
+  </div>
+  <div class="form__control">
+    <input 
+      type="checkbox"
+      id="upper_case" 
+      name="upper_case" 
+      formControlName="upper_case"
+      (click)="checkStrength()"
+    >
+    <label for="upper_case" class="form__label">
+    include uppercase letters
+    </label>
+  </div>
+  <div class="form__control">
+    <input 
+        type="checkbox"
+        id="lower_case" 
+        name="lower_case" 
+        formControlName="lower_case"
+    >
+    <label for="lower_case" class="form__label">
+        include lowercase letters
+    </label>
+  </div>
+  <div class="form__control">
+    <input 
+        type="checkbox"
+        id="numbers" 
+        name="numbers" 
+        class="form__control_checkbox"
+        formControlName="numbers"
+        (click)="checkStrength()"
+    >
+    <label for="numbers" class="form__label">
+        include numbers
+    </label>
+  </div>
+  <div class="form__control">
+    <input 
+        type="checkbox"
+        id="symbols" 
+        name="symbols" 
+        formControlName="symbols"
+        (click)="checkStrength()"
+    >
+    <label for="symbols" class="form__label">
+        include symbols
+    </label>
+  </div>
+  <div class="form_password_strenth">
+    <h3>STRENGTH</h3>
+    <div class="form_password_strenth__bar">
+        <h3>{{ passwordStrength.str || 'Very Low'}}</h3>
+        <span 
+          *ngFor="let item of createRange(passwordStrength.strength || 4)" 
+          [ngClass]="passwordStrength.str">
+        </span>
+    </div>
+  </div>
+  <button class="form__btn"
+    [disabled]="!passwordStrength.strength"
+    [ngClass]="passwordStrength.strength > 0 ? 'overclass': 'disabled'"
+  >Generate
+    <mat-icon class="btn__icon_g">
+        autorenew
+    </mat-icon>
+  </button>
+</form>
