@@ -28,7 +28,7 @@ export class AppComponent implements OnInit {
   symbols = true
   password = '';
   passwordForm!: FormGroup;
-  passwordStrenght!: string;
+  passwordStrenght!: number;
 
   constructor(
     private fb: FormBuilder,

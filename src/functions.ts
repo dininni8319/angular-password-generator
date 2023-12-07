@@ -56,21 +56,12 @@ export function checkStrength(
   lower_case: boolean,
   numbers: boolean,
   sym: boolean
-): string {
+) {
   let strength = 0;
   if (upper_case) strength++;
   if (lower_case) strength++;
   if (numbers) strength++;
   if (sym) strength++;
   
-  if (strength === 1) {
-    return 'LOW'
-  }
-  if (strength >= 2 && strength <= 3) {
-    return 'MEDIUM'
-  }
-  if (strength === 4) {
-    return 'HIGH'
-  }
-  return 'NONE'
+  return strength
 }
