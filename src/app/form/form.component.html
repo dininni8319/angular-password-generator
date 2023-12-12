@@ -71,8 +71,8 @@
     <div class="form_password_strenth__bar">
         <h3>{{ passwordStrength.str || 'Very Low'}}</h3>
         <span 
-          *ngFor="let item of createRange(passwordStrength.strength || 4)" 
-          [ngClass]="passwordStrength.str">
+          *ngFor="let item of createRange(4); let i" 
+          [ngClass]="(i <= passwordStrength.strength && passwordStrength.str) || ''">
         </span>
     </div>
   </div>
