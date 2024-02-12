@@ -45,8 +45,6 @@ Attended remote Hackademy course, based in Bari, Italy. The technology involved 
 <p>
 Completed Full-Stack Bootcamp with Propulsion Academy based in Zurich, Switzerland. Learned HTML5, CSS3, SCSS, JavaScript, React, Redux, Python, Django, PostgresSQL, REST Framework, Docker, GitLab, Git, NPM, Node, and Web Deployment. As a final project, I developed a Student Tracker, where professors of the course can keep track of student progress and grades. 
 </p>
-<br/>
-<p>
 
 ### Spoken languages: 
 - Italian 
