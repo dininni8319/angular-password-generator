@@ -80,4 +80,6 @@ export class FormComponent {
   createRange(number: number) {
     return new Array(number).fill(0).map((n, index) => index + 1);
   }
+
+  
 }
