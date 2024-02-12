@@ -1,8 +1,7 @@
 # PasswordGenerator
 
 ## Overview
-
-Application that allows you to generate a random password. You can also select the strength by choosing different options. Enjoy the live demo at: https://angular-password-generator-sage.vercel.app 
+A simple password generator written in JavaScript. The program generates a random length of alphanumeric characters. Enjoy the live demo at: https://angular-password-generator-sage.vercel.app 
 
 ## Development server
 
