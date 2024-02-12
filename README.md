@@ -2,7 +2,7 @@
 
 ## Overview
 
-Application that allows you to generate a random password. You can also select the strenth by selecting diffent options. Enjoy the live demo at: https://angular-password-generator-sage.vercel.app 
+Application that allows you to generate a random password. You can also select the strength by choosing different options. Enjoy the live demo at: https://angular-password-generator-sage.vercel.app 
 
 ## Development server
 
@@ -54,6 +54,7 @@ Spoken languages: Italian, English, German.</p>
 
 ### My other projects:
 <b>Game Streaming React / Laravel App: <a href="https://rehacktor.vercel.app/" >https://rehacktor.vercel.app</a></b> 
+<br>
 <b>Email Client Angular App: <a href="https://emailclient-henna.vercel.app" >https://emailclient-henna.vercel.app/</a></b> 
-
+<br>
 <b>Search User Github App: <a href="https://github-search-green-five.vercel.app/">https://github-search-green-five.vercel.app/</a></b>
