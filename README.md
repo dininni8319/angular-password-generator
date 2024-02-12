@@ -31,7 +31,9 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ## Frontend / Full-stack Developer
 <b>Salvatore Dininni</b>
 
-## Something about Me
+### Something about Me
+<p>From the sizzling world of the kitchen to the dynamic realm of tech, my journey took an unexpected turn during the pandemic. Embracing the art of coding with TypeScript, the younger cousin of JavaScript, has become my passion. With a deep understanding of frontend technologies, I bring a unique blend of creativity and technical prowess to every project. Currently exploring new opportunities in the frontend landscape – let's create something amazing together!</p>
+
 <p>A Highly Motivated Individual, open to new challenges and quickly learns new technologies. Self-driven, dedicated, and hard-working. Passionate about Web Development, Web Design, and Web Technologies.</p>
 <p>
 Attended remote HackJS course, based in Bari, Italy. Topics learned during the part-time course: Advanced Javascript, TDD, Type Coercion, React framework, React Native, Strapi. As a final project, i implemented Rehacktor, a Game Streaming application.
@@ -45,8 +47,11 @@ Completed Full-Stack Bootcamp with Propulsion Academy based in Zurich, Switzerla
 </p>
 <br/>
 <p>
-Spoken languages: Italian, English, German.</p>
-<br/>
+
+### Spoken languages: 
+- Italian 
+- English 
+- German
 
 ### More details...
 <b>LinkedIn Profile: <a href="https://www.linkedin.com/in/salvatoredininni/" >https://www.linkedin.com/in/salvatoredininni/ </a></b>
